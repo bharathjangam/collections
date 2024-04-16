@@ -35,20 +35,22 @@ public class LongestCommonPrefix {
     }
 
     public static String longestCommonPrefix(String[] strs) {
-        String longer = "";
+                String longer = "";
         String temp = strs[0];
         String temp2;
         boolean matched = false;
         for (int j = 0; j < temp.length(); j++) {
-            temp2 = temp.substring(temp.length()-j);
+            temp2 = temp.substring(0,temp.length() - j);
             System.out.println("TEMP2:" + temp2);
+            matched = true;
             for (int i = 1; i < strs.length; i++) {
-                    if(! strs[i].contains(temp2)){
-                        matched = false;
-                        break;
-                    }
+                System.out.println("Index of-->"+ strs[i].indexOf(temp2));
+                if ( (strs[i].indexOf(temp2)==-1)) {
+                    matched = false;
+                    break;
+                }
             }
-            if(matched){
+            if (matched) {
                 longer = temp2;
                 break;
             }

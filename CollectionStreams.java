@@ -12,7 +12,7 @@ public class CollectionStreams {
         //Stream.of()
         //List.of().stream()
         //IntStream.of()
-
+        //mapToInt
 
         oddEvenNumbers();
         frequencyOfEachCharInString();

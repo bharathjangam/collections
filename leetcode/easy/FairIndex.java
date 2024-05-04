@@ -29,7 +29,7 @@ for example:
 
 
  */
-public class CodeTest {
+public class FairIndex {
     public static void main(String[] args) {
         System.out.println("");
 
